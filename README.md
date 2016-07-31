@@ -1,59 +1,64 @@
 psychrometric
+### Installation
+
+npm i psychrometric --save
 
 ### Use as follows:
 
 ```javascript
+include psychrometric from 'psychrometric'
 
-var option= {
+var options= {
         db: 59.9,   // dry bulb temperature in °f
         bp: 14.64052, // barametric pressure in psi
         rh: 50, // relative humidiy in %
         wind: 0 // wind speed in mph
     }
 
-var myair = psych(options);
+var myAir = psychchrometric(options);
+
+console.log(myAir.data.psych.dewPoint);
 
 ```
 
 ### Return a object with the following properties
 
 ```javascript
-    data = {
-        data: {
-            psych: {
-                'db': db, // dry bulb (°F)
-                'wb': wb, // wetbulb (°F)
-                'bp': bp, // barametric pressure (psi)
-                'rh': rh, // Relative humidity (%)
-                'dp': dp, // dew point (°F)
-                'vol': vol, // Moist air specific volume (ft3 / lb da)
-                'enthalpy': enthalpy, // enthalpy (Btu / lb da)
-                humidityRatio: {
-                    'w': w, // (lb h2o / lb da)
-                    'w2': (w * 70000) / 10 // (gr h2o / lb da)
-                },
+  myAir = {
+        'data': {
+            'psych': {
+                'dryBulb',// dry bulb (°F)
+                'wetBulb', // wetbulb (°F)
+                'barometricPressure', // barametric pressure (psi)
+                'relativeHumidity', // Relative humidity (%)
+                'dewPoint', // dew point (°F)
+                'volume', // Moist air specific volume (ft3 / lb da)
+                'enthalpy' // enthalpy (Btu / lb da)
             },
-            other: {
-                'mw': mw, // Moleculare weight of moist air
-                'sph': sph, // Specific humidity
-                'gasconstant': gasconstant, // gasconstant (ft-lbf / lb-°R)
-                'entropyair': entropyair, // Entropy of dry air
-                'entropyvapor': entropyvapor, // Entropy of water vapor
-                'speed': speed, // Speed of sound (ft /sec)
-                'ws': ws, // Humidity ratio of saturated air
-                'saturation': saturation, // degree of saturation
-                'density': density, // density (lb / ft3)
-                'u': u, // internal energy (Btu /lb)
-                'enthalpys': enthalpys, // Sensibile enthalpy (Btu /lb)
-                'enthalpyl': enthalpyl, // Latent enthalpy (Btu /lb)
-                'HI': HI, // heat index 
-                'tv': tv, // virtual temperature (°F)
-                'windchill': chill, // Wind chill (°F)
-                specificHeat: { // (Btu / lb-°R)
-                    'cp': cp, // Isobaric specific heat
-                    'cv': cv, // Isometric specific heat
-                    'k': k, // Specific heat ratio
-                }
+            'humidityRatio': {
+                'lbH2oPerLb', // (lb h2o / lb da)
+                'grainsPerLb' // (gr h2o / lb da)
+            },
+            'other': {
+                'molecularWeight', // Moleculare weight of moist air
+                'specificHumidity', // Specific humidity
+                'gasConstant', // gasconstant (ft-lbf / lb-°R)
+                'entropyDryAir', // Entropy of dry air
+                'entropyWaterVapor', // Entropy of water vapor
+                'speedOfSound', // Speed of sound (ft /sec)
+                'humidityRatioSaturatedAir', // Humidity ratio of saturated air
+                'saturation', // degree of saturation (%)
+                'density', // density (lb / ft3)
+                'internalEnergy', // internal energy (Btu /lb)
+                'enthalpySensibleHeat', // Sensibile enthalpy (Btu /lb)
+                'enthalpyLatentHeat', // Latent enthalpy (Btu /lb)
+                'virtualTemperature', // virtual temperature (°F)
+                'windChill' // Wind chill (°F)
+            },
+            'specificHeat': { // (Btu / lb-°R)
+                'isobaric', // Isobaric specific heat
+                'isometric', // Isometric specific heat
+                'heatRatio' // Specific heat ratio
             }
         }
     }

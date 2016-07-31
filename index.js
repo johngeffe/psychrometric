@@ -122,7 +122,7 @@ function cpw(db) //specific heat of water vapor  (Shapiro 2ed)
     return cpvapor;
 }
 
-module.exports.psych = function(options) {
+module.exports.psychrometric = function(options) {
 
     var db;
     var bp; // barometric pressure in psia
