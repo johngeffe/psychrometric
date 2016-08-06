@@ -1,24 +1,24 @@
 {
-    "name": "psychrometric",
-    "version": "0.0.1",
-    "description": "properties of air",
-    "main": "index.js",
-    "scripts": {
-        "test": "mocha --reporter list"
-    },
-    "tonicExampleFilename": "example.js",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/johngeffe/psychrometric.git"
-    },
-    "author": "john geffe",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/johngeffe/psychrometric/issues"
-    },
-    "homepage": "https://github.com/johngeffe/psychrometric#readme",
-    "devDependencies": {
-        "chai": "^3.5.0",
-        "mocha": "^2.5.3"
-    }
+  "name": "psychrometric",
+  "version": "0.0.2",
+  "description": "properties of air",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter list"
+  },
+  "tonicExampleFilename": "example.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johngeffe/psychrometric.git"
+  },
+  "author": "john geffe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johngeffe/psychrometric/issues"
+  },
+  "homepage": "https://github.com/johngeffe/psychrometric#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
 }
