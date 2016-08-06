@@ -162,7 +162,7 @@ module.exports.psychrometric = function(options) {
         rh: 50,
         wind: 0
     } : options;
-    console.log(options);
+    if (options.debug) console.log(options);
     // calculate barometricPressure
     db = options.db; // dryBulb temperature in deg f
     bp = options.bp; // barometric pressure in psia
